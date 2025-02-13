@@ -1,0 +1,22 @@
+$root-f-size:18;
+$color-0:#2a2426;
+
+@function px($pixel-num) {
+  @return ($pixel-num/$root-f-size)*1rem;
+}
+
+@mixin grid($template) {
+  display: grid;
+  grid-template-columns: $template ;
+  gap: px(20);
+}
+
+:root{
+  font: {
+    size: $root-f-size + px;
+    family: "PT Mono", monospace
+  };
+  color: $color-0;
+  line-height: 1.3;
+}
+

@@ -1,0 +1,8 @@
+@use './global' as g;
+
+.container{
+  @include g.grid(12fr);
+  max-width: 1200px;
+  padding: g.px(10);
+  margin: 0 auto;
+}
