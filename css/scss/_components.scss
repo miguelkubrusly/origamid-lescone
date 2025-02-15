@@ -1,8 +1,8 @@
-@use './global' as g;
+@use "./config" as *;
 
-.container{
-  @include g.grid(12fr);
+.container {
+  @include grid(12fr);
   max-width: 1200px;
-  padding: g.px(10);
+  padding: px(10);
   margin: 0 auto;
 }

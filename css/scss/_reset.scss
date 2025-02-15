@@ -1,17 +1,24 @@
-@use './global' as g;
+@use "./config" as *;
 
-*, *::after, *::before{
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-}
-
-body, ul{
   margin: 0;
   padding: 0;
 }
 
-a{
+li {
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
   text-decoration: none;
-  color: g.$color-0;
+  color: $color-0;
 }

@@ -1,22 +1,25 @@
-$root-f-size:18;
-$color-0:#2a2426;
+@use "./config" as *;
 
-@function px($pixel-num) {
-  @return ($pixel-num/$root-f-size)*1rem;
-}
-
-@mixin grid($template) {
-  display: grid;
-  grid-template-columns: $template ;
-  gap: px(20);
-}
-
-:root{
+:root {
   font: {
-    size: $root-f-size + px;
-    family: "PT Mono", monospace
-  };
+    size: $initial-font-size + px;
+    family: $font-1;
+  }
   color: $color-0;
   line-height: 1.3;
+  @for $i from 3 through 1 {
+    @include device($i) {
+      font-size: $initial-font-size - 2 * (4-$i) + px;
+    }
+  }
 }
 
+body {
+  background: $color-1;
+  border: px(10) solid $color-2;
+}
+
+img {
+  max-height: 100%;
+  object-fit: cover;
+}
