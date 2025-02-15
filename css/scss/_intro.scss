@@ -1,0 +1,15 @@
+@use "./config" as *;
+
+.info {
+  margin-top: $space-7;
+  @include grid(5fr 7fr);
+  grid-auto-rows: min-content;
+  .kitchen-pic{
+    width: 100%;
+    height: 100%;
+  }
+  &>section{
+
+  }
+
+}
