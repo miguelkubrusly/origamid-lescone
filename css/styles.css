@@ -1,3 +1,14 @@
+@keyframes blink {
+  0%, 80% {
+    opacity: 1;
+  }
+  81%, 83% {
+    opacity: 0.5;
+  }
+  84%, 100% {
+    opacity: 0;
+  }
+}
 :root {
   font-size: 18px;
   font-family: "PT Mono", monospace;
@@ -32,7 +43,6 @@ body {
 
 img {
   display: block;
-  max-height: 100%;
   object-fit: cover;
 }
 
@@ -62,11 +72,12 @@ a {
 .container {
   display: grid;
   grid-template-columns: 12fr;
-  place-items: start;
-  gap: space(5);
+  gap: 1.1111111111rem;
+  align-items: start;
   max-width: 1200px;
   padding: 0.5555555556rem;
   margin: 0 auto;
+  justify-items: center;
 }
 
 .title {
@@ -84,17 +95,93 @@ a {
   margin-left: 1.1111111111rem;
 }
 
-.info {
+.intro {
   margin-top: 2.2222222222rem;
   display: grid;
   grid-template-columns: 5fr 7fr;
-  place-items: start;
-  gap: space(5);
+  gap: 1.1111111111rem;
+  align-items: start;
   grid-auto-rows: min-content;
 }
-.info .kitchen-pic {
-  width: 100%;
+@media (0 <= width < 800px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+}
+.intro span {
+  display: block;
+}
+.intro .kitchen-pic {
+  max-width: 100%;
   height: 100%;
+  border: 0.5555555556rem solid #cbc6b9;
+}
+@media (0 <= width < 800px) {
+  .intro .kitchen-pic {
+    height: initial;
+    margin-top: 0.8888888889rem;
+  }
+}
+.intro .logo {
+  margin-bottom: 2.2222222222rem;
+}
+.intro > section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1111111111rem;
+  align-items: start;
+}
+.intro > section::after {
+  content: "////";
+  display: inline-block;
+  font-size: 12.2222222222rem;
+  letter-spacing: -3.3333333333rem;
+  line-height: 0.87;
+  width: 100%;
+}
+@media (0 <= width < 1200px) {
+  .intro > section::after {
+    margin-right: 2.2222222222rem;
+  }
+}
+@media (0 <= width < 800px) {
+  .intro > section::after {
+    display: none;
+  }
+}
+.intro div {
+  position: relative;
+  width: 100%;
+  max-width: 17.7777777778rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-right: solid 0.1111111111rem #2a2426;
+}
+.intro div address {
+  padding-top: 0.5555555556rem;
+}
+.intro div p {
+  padding-bottom: 0.5555555556rem;
+  border-bottom: solid 0.1111111111rem #2a2426;
+}
+.intro div::after {
+  content: "";
+  position: absolute;
+  background: #1ab912;
+  width: 0.6666666667rem;
+  height: 0.6666666667rem;
+  border-radius: 50%;
+  left: 10rem;
+  top: 0.25rem;
+  animation: blink 1.2s steps(3, start) infinite;
+}
+.intro a {
+  color: #988c77;
+}
+.intro a:hover {
+  filter: brightness(0.7);
 }
 
 /*# sourceMappingURL=styles.css.map */
