@@ -1,0 +1,60 @@
+@use "../config" as *;
+
+.menu {
+  @include grid(1fr 2fr, $space-8);
+  justify-self: center;
+  margin-left: $space-10;
+  width: max-content;
+  h1{
+    margin-bottom: $space-8;
+  }
+  section {
+    grid-column: 2;
+    position: relative;
+    h2 {
+      font-family: $font-2;
+      font-size: $font-l;
+      margin-bottom: $space-6;
+    }
+    span {
+      display: inline-block;
+      font-family: $font-2;
+      color: $color-3;
+      width: px(70);
+      margin-right: px(10);
+      margin-left: px(-80);
+      text-align: end;
+      @include device(1){
+      margin-left: px(0);
+
+      }
+    }
+    img {
+      border-radius: 50%;
+      position: absolute;
+      top: 1rem;
+      right: -14rem;
+      @include border;
+      @include device(4) {
+        height: px(120);
+        top: 3rem;
+        right: -10rem;
+      }
+      @include device(3) {
+        top: 4rem;
+        left: -14rem;
+      } 
+      @include device(1){
+        display: none;
+        
+      }
+    }
+  }
+  @include device(3) {
+    margin-top: $space-7;
+  }
+  @include device(1){
+    margin: 0 auto;
+    @include flex(col);
+  };
+}

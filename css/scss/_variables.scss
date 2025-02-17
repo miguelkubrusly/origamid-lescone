@@ -1,7 +1,7 @@
-@use "./config" as *;
+@use "./functions" as *;
+@forward "./functions";
 
 //font
-$initial-font-size: 18;
 $font-1: "PT Mono", monospace;
 $font-2: "Aref Ruqaa", serif;
 
@@ -33,9 +33,10 @@ $color-success: #1ab912;
 //screen sizes
 $screen-map: (
   0: 300px,
-  1: 400px,
+  1: 500px,
   2: 600px,
-  3: 800px,
-  4: 1200px,
-  5: 1600px,
+  3: 900px,
+  4: 1000px,
+  5: 1200px,
+  6: 1500px,
 );

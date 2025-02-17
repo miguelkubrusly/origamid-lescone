@@ -1,0 +1,76 @@
+@use "../config" as *;
+
+.intro {
+  @include grid(5fr 7fr);
+  grid-auto-rows: min-content;
+  // margin: 0 auto;
+  @include device(3) {
+    grid-template-columns: 1fr;
+  }
+  span {
+    display: block;
+  }
+  .kitchen-pic {
+    align-self: right;
+    max-width: 100%;
+    height: 100%;
+    @include border;
+    @include device(3) {
+      height: initial;
+      max-height: 520px;
+      margin-top: $space-4;
+    }
+  }
+  .logo {
+    margin-bottom: $space-7;
+  }
+  & > section {
+    width: 100%;
+    @include detail {
+      font-size: px(220);
+      letter-spacing: px(-60);
+      line-height: 0.87;
+      width: 100%;
+      @include device(4) {
+        margin-right: $space-7;
+      }
+      @include device(3) {
+        display: none;
+      }
+    }
+    @include flex(col, $space-5);
+    align-items: start;
+  }
+  div {
+    position: relative;
+    width: 100%;
+    max-width: px(320);
+    @include flex(col, 0);
+    border-right: solid px(2) $color-0;
+    @include device(3) {
+      border-right: none;
+    }
+    address {
+      padding-top: $space-3;
+    }
+    p {
+      padding-bottom: $space-3;
+      border-bottom: solid px(2) $color-0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: $color-success;
+      width: px(12);
+      height: px(12);
+      border-radius: 50%;
+      left: px(180);
+      top: px(5);
+      animation: blink 1.2s steps(3, start) infinite;
+    }
+  }
+  a {
+    color: $color-3;
+    @include hover-brightness(0.7);
+  }
+}

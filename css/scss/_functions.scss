@@ -1,0 +1,7 @@
+@use "sass:math";
+
+$initial-font-size: 18;
+
+@function px($pixel-num, $font-size-context: $initial-font-size) {
+  @return math.div($pixel-num, $font-size-context) * 1rem;
+}

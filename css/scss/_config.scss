@@ -1,49 +1,7 @@
 @use "sass:math";
 @use "sass:map";
 
-@use "./variables" as *;
+@forward "./functions";
+@forward "./mixins";
 @forward "./variables";
 @forward "./animations";
-
-//functions
-@function px($pixel-num) {
-  @return math.div($pixel-num, $initial-font-size) * 1rem;
-}
-
-//mixins
-@mixin device($screen-index, $min-size: 0) {
-  $max-size: map.get($screen-map, $screen-index);
-  @media (#{$min-size} <= width < #{$max-size}) {
-    @content;
-  }
-}
-
-@mixin grid($template, $gap-in-pixels: $space-5) {
-  display: grid;
-  grid-template-columns: $template;
-  gap: $gap-in-pixels;
-  align-items: start;
-}
-
-@mixin flex($direction: row, $gap-in-pixels: $space-5) {
-  @if $direction==col {
-    $direction: column;
-  }
-  display: flex;
-  flex-direction: $direction;
-  gap: $gap-in-pixels;
-}
-
-@mixin detail() {
-  &::after {
-    content: "////";
-    display: inline-block;
-    @content;
-  }
-}
-
-@mixin hover-brightness($brightness: 0.8) {
-  &:hover {
-    filter: brightness($brightness);
-  }
-}

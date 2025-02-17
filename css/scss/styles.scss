@@ -1,5 +1,8 @@
 @use "./config";
-@use "./global";
+
 @use "./reset";
+@use "./global";
 @use "./components";
-@use './intro';
+
+@use './page-sectors/intro';
+@use './page-sectors/menu';
