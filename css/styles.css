@@ -24,8 +24,14 @@ body {
   background: #edece4;
   border: 0.5555555556rem solid #cbc6b9;
 }
+@media (0 <= width < 600px) {
+  body {
+    border: none;
+  }
+}
 
 img {
+  display: block;
   max-height: 100%;
   object-fit: cover;
 }
@@ -61,6 +67,21 @@ a {
   max-width: 1200px;
   padding: 0.5555555556rem;
   margin: 0 auto;
+}
+
+.title {
+  text-transform: uppercase;
+  position: relative;
+}
+.title::after {
+  content: "";
+  display: inline-block;
+  background: #2a2426;
+  width: 70%;
+  height: 0.1111111111rem;
+  position: absolute;
+  top: 0.8055555556rem;
+  margin-left: 1.1111111111rem;
 }
 
 .info {

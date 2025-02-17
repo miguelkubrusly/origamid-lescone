@@ -17,9 +17,14 @@
 body {
   background: $color-1;
   border: px(10) solid $color-2;
+  @include device(2){
+    border: none;
+  }
 }
 
 img {
+  display: block;
   max-height: 100%;
   object-fit: cover;
 }
+

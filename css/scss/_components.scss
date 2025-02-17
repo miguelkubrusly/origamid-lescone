@@ -6,3 +6,18 @@
   padding: px(10);
   margin: 0 auto;
 }
+
+.title{
+  text-transform: uppercase;
+  position: relative;
+  &::after{
+    content: '';
+    display: inline-block;
+    background:$color-0;
+    width: 70%;
+    height: px(2);
+    position: absolute;
+    top: px(14.5);
+  margin-left: $space-5;
+  }
+}
