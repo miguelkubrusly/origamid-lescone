@@ -2,15 +2,16 @@
 
 .menu {
   @include grid(1fr 2fr, $space-8);
-  justify-self: center;
+  justify-self: start;
   margin-left: $space-10;
   width: max-content;
-  h1{
-    margin-bottom: $space-8;
-  }
+
   section {
     grid-column: 2;
     position: relative;
+    h1 {
+      margin-right: 15rem;
+    }
     h2 {
       font-family: $font-2;
       font-size: $font-l;
@@ -24,9 +25,8 @@
       margin-right: px(10);
       margin-left: px(-80);
       text-align: end;
-      @include device(1){
-      margin-left: px(0);
-
+      @include device(1) {
+        margin-left: px(0);
       }
     }
     img {
@@ -43,18 +43,19 @@
       @include device(3) {
         top: 4rem;
         left: -14rem;
-      } 
-      @include device(1){
+      }
+      @include device(1) {
         display: none;
-        
       }
     }
   }
   @include device(3) {
     margin-top: $space-7;
+    margin-right: $space-7;
+    margin-left: $space-7;
   }
-  @include device(1){
-    margin: 0 auto;
+  @include device(1) {
+    margin: 2rem auto;
     @include flex(col);
-  };
+  }
 }

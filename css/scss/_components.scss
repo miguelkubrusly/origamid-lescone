@@ -9,10 +9,9 @@
   justify-content: center;
   justify-self: center;
   margin-top: $space-10;
-  @include device(1){
-  margin-top: $space-8;
-
-  };
+  @include device(1) {
+    margin-top: $space-8;
+  }
 }
 
 .title {
@@ -22,19 +21,27 @@
   font-size: 1rem;
   padding-right: $space-10;
   line-height: 2rem;
+  margin-bottom: $space-8;
+  @include device(3) {
+    margin-bottom: $space-6;
+  }
+  @include device(2, 499) {
+    margin-left: 8rem;
+  }
+
   &::after {
     content: "";
     display: inline-block;
     background: $color-0;
     width: 100%;
-    height: px(2);
+    height: px(1);
     position: absolute;
     top: px(16);
     margin-left: $space-5;
-    @include device(2){
+    @include device(2) {
       width: 50%;
-    };
-    @include device(1){
+    }
+    @include device(1) {
       width: 100%;
     }
   }

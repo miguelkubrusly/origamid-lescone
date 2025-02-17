@@ -1,0 +1,109 @@
+@use "../config" as *;
+
+.contact {
+  @include grid(auto 1fr, $space-7);
+  justify-self: center;
+  justify-content: center;
+
+  justify-items: start;
+  margin-left: $space-10;
+  margin-right: $space-10;
+  h1 {
+    margin-right: 15vw;
+    width: 100%;
+
+    &::after {
+      width: 70%;
+      @include device(3) {
+        width: 40vw;
+        margin-right: 0;
+      }
+    }
+    @include device(3) {
+      margin-left: 1rem;
+    }
+    @include device(2,365) {
+    text-align: center;
+    margin: 0;
+    margin-left: -5rem;
+    }
+  }
+  form {
+    width: 100%;
+  }
+  label {
+    font-size: $font-m;
+    font-family: $font-1;
+    display: block;
+  }
+  input,
+  textarea {
+    color: $color-0;
+    width: 100%;
+    padding: 0 px(5);
+    height: px(40);
+    border: px(2) solid $color-3;
+    background: transparent;
+    margin-bottom: 1rem;
+    &:hover,
+    &:focus {
+      outline: none;
+      border-color: $color-2;
+    }
+  }
+  textarea {
+    height: px(120);
+  }
+
+  address {
+    @include flex(col, $space-3);
+    color: $color-3;
+    margin-top: px(-20);
+    margin-bottom: px(20);
+    width: 100%;
+    grid-column: 2;
+    li {
+      @include detail;
+      display: block;
+    }
+    img {
+      margin-top: 1rem;
+      width: 100%;
+      @include device(4) {
+        grid-column: 1;
+      }
+    }
+    @include device(3) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    color: $color-3;
+    text-transform: uppercase;
+    border: px(2) solid $color-3;
+    background: transparent;
+    display: block;
+    width: px(200);
+    padding-top: px(10);
+    padding-bottom: px(10);
+    box-shadow: (px(5) px(5) 0 px(-2) $color-2, px(5) px(5) 0 0 $color-3);
+    transition: 0.3s;
+    &:hover {
+      box-shadow: (px(3) px(3) 0 px(-2) $color-3, px(3) px(3) 0 0 $color-3);
+    }
+  }
+
+  @include device(3) {
+    margin-top: $space-7;
+    margin-right: $space-7;
+    margin-left: $space-7;
+
+    @include flex(col);
+  }
+  @include device(2) {
+    margin: 0 auto $space-9 auto;
+  }
+}

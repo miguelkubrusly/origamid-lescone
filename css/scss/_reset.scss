@@ -29,5 +29,14 @@ address {
 
 a {
   text-decoration: none;
-  color: $color-0;
+  color: inherit;
+}
+
+button{
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
 }
