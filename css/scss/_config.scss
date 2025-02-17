@@ -1,51 +1,14 @@
 @use "sass:math";
 @use "sass:map";
 
+@use "./variables" as *;
+@forward "./variables";
+@forward "./animations";
+
 //functions
 @function px($pixel-num) {
   @return math.div($pixel-num, $initial-font-size) * 1rem;
 }
-
-//vars
-//font
-$initial-font-size: 18;
-$font-1: "PT Mono", monospace;
-$font-2: "Aref Ruqaa", serif;
-
-$font-s: px(12);
-$font-m: px(18);
-$font-l: px(24);
-$font-xl: px(48);
-$font-xxl: px(72);
-
-//space: gap, padding, margin...
-$space-1: px(4);
-$space-2: px(8);
-$space-3: px(10);
-$space-4: px(16);
-$space-5: px(20);
-$space-6: px(32);
-$space-7: px(40);
-$space-8: px(64);
-$space-9: px(80);
-$space-10: px(128);
-
-//colors
-$color-0: #2a2426;
-$color-1: #edece4;
-$color-2: #cbc6b9;
-$color-3: #988c77;
-$color-success: #1ab912;
-
-//screen sizes
-$screen-map: (
-  0: 300px,
-  1: 400px,
-  2: 600px,
-  3: 800px,
-  4: 1200px,
-  5: 1600px,
-);
 
 //mixins
 @mixin device($screen-index, $min-size: 0) {
@@ -82,21 +45,5 @@ $screen-map: (
 @mixin hover-brightness($brightness: 0.8) {
   &:hover {
     filter: brightness($brightness);
-  }
-}
-
-//animations
-@keyframes blink {
-  0%,
-  80% {
-    opacity: 1;
-  }
-  81%,
-  83% {
-    opacity: 0.5;
-  }
-  84%,
-  100% {
-    opacity: 0;
   }
 }
