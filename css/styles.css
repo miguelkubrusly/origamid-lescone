@@ -235,6 +235,10 @@ img {
   top: 0.2777777778rem;
   animation: blink 1.2s steps(3, start) infinite;
 }
+.intro div.closed::after {
+  background: #740c16;
+  animation: none;
+}
 .intro a {
   color: #988c77;
 }

@@ -71,6 +71,10 @@
       top: px(5);
       animation: blink 1.2s steps(3, start) infinite;
     }
+    &.closed::after {
+      background: $color-danger;
+      animation: none;
+    }
   }
   a {
     color: $color-3;
