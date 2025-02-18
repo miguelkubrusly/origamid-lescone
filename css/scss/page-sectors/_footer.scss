@@ -1,0 +1,24 @@
+@use "../config" as *;
+
+footer {
+  background: $color-0;
+  box-shadow:0 0 0 px(10) ;
+}
+
+.footer {
+  color: $color-1;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $space-6 $space-4;
+  img{
+    max-width: max-content;
+  }
+  @include device(2){
+    gap: $space-5;
+    flex-direction: column;
+    text-align: center;
+  };
+}
