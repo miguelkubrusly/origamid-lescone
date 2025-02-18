@@ -4,12 +4,11 @@
   @include grid(12fr);
   max-width: 1200px;
   padding: px(10);
-  margin: 0 auto;
-  justify-items: center;
-  justify-content: center;
-  justify-self: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: $space-10;
   @include device(1) {
+    padding: 0;
     margin-top: $space-8;
   }
 }
@@ -19,16 +18,11 @@
   position: relative;
   font-weight: 600;
   font-size: 1rem;
-  padding-right: $space-10;
   line-height: 2rem;
   margin-bottom: $space-8;
   @include device(3) {
     margin-bottom: $space-6;
   }
-  @include device(2, 499) {
-    margin-left: 8rem;
-  }
-
   &::after {
     content: "";
     display: inline-block;
@@ -38,11 +32,19 @@
     position: absolute;
     top: px(16);
     margin-left: $space-5;
-    @include device(2) {
-      width: 50%;
-    }
+    margin-right: $space-5;
     @include device(1) {
+      display: block;
+      top: 3.5ch;
       width: 100%;
+      margin-left: 0;
+      margin-right: 0;
     }
+    // @include device(2) {
+    //   width: 50%;
+    // }
+    // @include device(1) {
+    //   width: 100%;
+    // }
   }
 }

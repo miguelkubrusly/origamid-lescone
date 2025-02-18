@@ -1,33 +1,11 @@
 @use "../config" as *;
 
 .contact {
-  @include grid(auto 1fr, $space-7);
+  
+  @include grid(5fr 7fr, $space-8);
+  margin: $space-9 auto;
+  width: 90%;
   justify-self: center;
-  justify-content: center;
-
-  justify-items: start;
-  margin-left: $space-10;
-  margin-right: $space-10;
-  h1 {
-    margin-right: 15vw;
-    width: 100%;
-
-    &::after {
-      width: 70%;
-      @include device(3) {
-        width: 40vw;
-        margin-right: 0;
-      }
-    }
-    @include device(3) {
-      margin-left: 1rem;
-    }
-    @include device(2,365) {
-    text-align: center;
-    margin: 0;
-    margin-left: -5rem;
-    }
-  }
   form {
     width: 100%;
   }
@@ -38,8 +16,9 @@
   }
   input,
   textarea {
-    color: $color-0;
     width: 100%;
+    max-width: 600px;
+    color: $color-0;
     padding: 0 px(5);
     height: px(40);
     border: px(2) solid $color-3;
@@ -67,10 +46,15 @@
       display: block;
     }
     img {
+      @include border;
       margin-top: 1rem;
       width: 100%;
       @include device(4) {
         grid-column: 1;
+      }
+      @include device(1) {
+        width: 100vw;
+        border: none;
       }
     }
     @include device(3) {
@@ -78,7 +62,14 @@
       margin-bottom: 0;
     }
   }
-
+  .title {
+    &::after {
+      width: 50%;
+      @include device(3) {
+        width: 70vw;
+      }
+    }
+  }
   button {
     cursor: pointer;
     color: $color-3;
@@ -96,14 +87,10 @@
     }
   }
 
+
   @include device(3) {
     margin-top: $space-7;
-    margin-right: $space-7;
-    margin-left: $space-7;
-
     @include flex(col);
   }
-  @include device(2) {
-    margin: 0 auto $space-9 auto;
-  }
+
 }

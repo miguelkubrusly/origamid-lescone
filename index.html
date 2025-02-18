@@ -27,12 +27,12 @@
               >
             </p>
             <address>
-              <ul>
-                <li>Praia de Botafogo, 300 <span>Rio de Janeiro, RJ</span></li>        </div>
-                <li><a href="tel:+552124123333">+55 021 2412-3333</a></li>
-              </ul>
+              <p>Praia de Botafogo, 300 <span>Rio de Janeiro, RJ</span></p>
             </address>
-  
+          </div>
+          <address>
+            <a href="tel:+552124123333">+55 021 2412-3333</a>
+          </address>
         </section>
         <img
           class="kitchen-pic"
@@ -41,7 +41,7 @@
         />
       </article>
 
-      <section class="menu container">
+      <section class="menu">
         <h1 class="title">Menu</h1>
 
         <section class="entrada">
@@ -56,7 +56,7 @@
           <img src="/img/prato-1.png" alt="um prato de arroz com camarão" />
         </section>
 
-        <section  class="pratos-principais">
+        <section class="pratos-principais">
           <h2>Pratos Principais</h2>
           <ul>
             <li><span>R$10,70</span>Penne com Queijo</li>
@@ -68,45 +68,45 @@
           <img src="/img/prato-2.png" alt="hambúrguer com queijo e bacon" />
         </section>
       </section>
+
+      <section class="contact">
+        <h1 class="title">Contato</h1>
+        <form>
+          <p>
+            <label for="nome">Nome</label>
+            <input id="nome" type="text" required />
+          </p>
+          <p>
+            <label for="email">E-mail</label>
+            <input id="email" type="email" required />
+          </p>
+          <p>
+            <label for="telefone">Telefone</label>
+            <input id="telefone" type="tel" required />
+          </p>
+          <p>
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" required></textarea>
+          </p>
+          <button type="submit">Enviar</button>
+        </form>
+
+        <address>
+          <ul>
+            <li>
+              <a href="mailto:contato@lescone.com">contato@lescone.com</a>
+            </li>
+            <li>
+              <a href="tel:+552124123333">+55 021 2412-3333</a>
+            </li>
+          </ul>
+          <img src="/img/map.png" alt="mapa com endereço da Le Scone" />
+        </address>
+      </section>
     </main>
 
-    <section class="contact container">
-      <h1 class="title">Contato</h1>
-      <form>
-        <p>
-          <label for="nome">Nome</label>
-          <input id="nome" type="text" required />
-        </p>
-        <p>
-          <label for="email">E-mail</label>
-          <input id="email" type="email" required />
-        </p>
-        <p>
-          <label for="telefone">Telefone</label>
-          <input id="telefone" type="tel" required />
-        </p>
-        <p>
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" required></textarea>
-        </p>
-        <button type="submit">Enviar</button>
-      </form>
-
-      <address>
-        <ul>
-          <li>
-            <a href="mailto:contato@lescone.com">contato@lescone.com</a>
-          </li>
-          <li>
-            <a href="tel:+552124123333">+55 021 2412-3333</a>
-          </li>
-        </ul>
-        <img src="/img/map.png" alt="mapa com endereço da Le Scone" />
-      </address>
-    </section>
-
     <footer>
-      <section class="container">
+      <section class="footer">
         <p>Le Scone © 1989 - 2016. Alguns direitos reservados</p>
         <img src="/img/lescone-icone.png" alt="ícone da Le Scone" />
       </section>

@@ -1,17 +1,19 @@
 @use "../config" as *;
 
 .menu {
-  @include grid(1fr 2fr, $space-8);
-  justify-self: start;
-  margin-left: $space-10;
-  width: max-content;
-
+  width: 90%;
+  @include grid(5fr 7fr, $space-8);
+  margin-top: $space-8;
+  margin-bottom: $space-8;
+  justify-self: center;
   section {
+    margin-left: $space-9;
     grid-column: 2;
     position: relative;
-    h1 {
-      margin-right: 15rem;
+    @include device(1) {
+      margin-left: 0;
     }
+
     h2 {
       font-family: $font-2;
       font-size: $font-l;
@@ -33,16 +35,18 @@
       border-radius: 50%;
       position: absolute;
       top: 1rem;
-      right: -14rem;
+      right: 2rem;
       @include border;
+      @include device(5) {
+        height: px(160);
+      }
       @include device(4) {
-        height: px(120);
+        height: px(140);
         top: 3rem;
-        right: -10rem;
       }
       @include device(3) {
-        top: 4rem;
-        left: -14rem;
+        top: 3rem;
+        left: -16rem;
       }
       @include device(1) {
         display: none;
@@ -50,12 +54,19 @@
     }
   }
   @include device(3) {
-    margin-top: $space-7;
-    margin-right: $space-7;
-    margin-left: $space-7;
+    margin-left: 0;
+    margin-top: $space-10;
   }
   @include device(1) {
-    margin: 2rem auto;
+    margin-left: 5%;
+    justify-self: start;
     @include flex(col);
+  }
+  .title {
+    &::after {
+      @include device(1) {
+        width: 70vw;
+      }
+    }
   }
 }

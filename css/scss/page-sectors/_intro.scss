@@ -3,7 +3,9 @@
 .intro {
   @include grid(5fr 7fr);
   grid-auto-rows: min-content;
-  // margin: 0 auto;
+  padding: 0 $space-5;
+  margin-top: $space-5;
+  justify-self: center;
   @include device(3) {
     grid-template-columns: 1fr;
   }
@@ -51,11 +53,12 @@
       border-right: none;
     }
     address {
+      border-top: solid px(2) $color-0;
+
       padding-top: $space-3;
     }
     p {
       padding-bottom: $space-3;
-      border-bottom: solid px(2) $color-0;
     }
     &::after {
       content: "";
