@@ -128,7 +128,7 @@ img {
   display: inline-block;
   background: #2a2426;
   width: 100%;
-  height: 0.0555555556rem;
+  height: 0.1111111111rem;
   position: absolute;
   top: 0.8888888889rem;
   margin-left: 1.1111111111rem;
@@ -152,7 +152,6 @@ img {
   grid-auto-rows: min-content;
   padding: 0 1.1111111111rem;
   margin-top: 1.1111111111rem;
-  justify-self: center;
 }
 @media (0 <= width < 900px) {
   .intro {
@@ -164,8 +163,8 @@ img {
 }
 .intro .kitchen-pic {
   align-self: right;
-  max-width: 100%;
-  height: 100%;
+  width: 100%;
+  height: auto;
   border: 0.5555555556rem solid #cbc6b9;
 }
 @media (0 <= width < 900px) {
@@ -192,6 +191,7 @@ img {
   letter-spacing: -3.3333333333rem;
   line-height: 0.87;
   width: 100%;
+  margin-top: 2.2222222222rem;
 }
 @media (0 <= width < 1000px) {
   .intro > section::after {

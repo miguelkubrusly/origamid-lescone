@@ -5,17 +5,17 @@
   grid-auto-rows: min-content;
   padding: 0 $space-5;
   margin-top: $space-5;
-  justify-self: center;
   @include device(3) {
     grid-template-columns: 1fr;
+
   }
   span {
     display: block;
   }
   .kitchen-pic {
     align-self: right;
-    max-width: 100%;
-    height: 100%;
+    width: 100%;
+    height: auto;
     @include border;
     @include device(3) {
       height: initial;
@@ -33,6 +33,7 @@
       letter-spacing: px(-60);
       line-height: 0.87;
       width: 100%;
+      margin-top: $space-7;
       @include device(4) {
         margin-right: $space-7;
       }
